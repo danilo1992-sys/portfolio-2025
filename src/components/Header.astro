@@ -1,5 +1,13 @@
-<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-  <nav class="flex items-center justify-between w-full max-w-4xl px-4 py-2 mx-auto bg-white border border-gray-200 rounded-lg shadow-md">
-    <a href="">Hola mundo</a>
+---
+const  {about, contact, project} = Astro.props
+---
+
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-6">
+  <nav class="flex justify-center w-full max-w-4xl px-4 py-2 mx-auto bg-white border border-gray-200 rounded-lg shadow-mg">
+    <div class="space-x-4">
+      <a href="">{about}</a>
+      <a class="" href="">{contact}</a>
+      <a class="" href="">{project}</a>
+    </div>
   </nav>
 </header>
