@@ -13,7 +13,6 @@ export default {
 
   home:{
     about:"Danilo Caceres porgramador full stack",
-    javascript:"Javascript",
-    python:"Python",
+    and:"con",
   }
 }

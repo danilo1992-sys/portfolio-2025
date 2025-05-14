@@ -13,8 +13,7 @@ export default {
 
   home:{
     about: "Danilo Caceres full stack programmer with",
-    javascript: "Javascript",
-    python: "Python",
+    and:"and",
   }
 }
 
