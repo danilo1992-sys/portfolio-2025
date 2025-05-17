@@ -1,0 +1,46 @@
+---
+import Books from "./icons/Books.astro"
+const {its, titulo1, python, titulo2, javascript, titulo3, docker, titulo4, instituto, experience} = Astro.props;
+
+const exp = [
+  {
+    institue: its,
+    title: titulo1,
+    year:"2018-2020",
+    certificado:"",
+  },
+  {
+    institue: python,
+    title: titulo2,
+    year:"2021-2022",
+    certificado:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-1aff4b92-a848-479c-a242-7d62f0e60ab0.pdf",
+  },
+  {
+    institue: javascript,
+    title: titulo3,
+    year:"2022-2023",
+    certificado:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-d2da7f5d-d789-4a28-9c8f-83af6dbceb7e.pdf",
+  },
+  {
+    institue: docker,
+    title: titulo4,
+    year:"2023-2024",
+    certificado:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-a9666240-6277-4acd-868b-59d07d414a9f.pdf",
+  }, 
+];
+---
+<p class="text-2xl font-bold text-gray-100 dark:text-white px-36 flex mb-6">
+<Books/>
+  {experience}
+</p>
+<div class="px-36">
+  <ol class="relative border-s border-gray-200 dark:border-gray-700 itmes-center sm:flex ">
+<li class="relative mb-6 sm:mb-0">
+      <div class="absolute w-3 h-3 bg-blue-500 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900">
+        <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">123</time>
+        <h3 class="text-lg font-semibold text-gray-100 dark:text-white">Hola mundo</h3>
+          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-500">Hola</p>
+      </div>
+    </li>
+  </ol>
+</div>

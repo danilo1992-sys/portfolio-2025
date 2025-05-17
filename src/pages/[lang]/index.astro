@@ -5,6 +5,7 @@ import es from "../../i18n/es"
 import en from "../../i18n/en"
 import type { Language } from "../../type/language.type"
 import Home from "../../components/Home.astro"
+import Experience from "../../components/Experience.astro"
 
 export function getStaticPaths () {
   return [{ params: { lang: "en" }}, { params: { lang: "es" }}];
@@ -19,4 +20,16 @@ const t = translations[lang]
 <Layout lang={lang} t={t}>
   <Header contact={t.header.contact}, about={t.header.about}, project={t.header.project}/>
   <Home home={t.home.about}, and={t.home.and}/>
+  <Experience
+    institue={t.experience.instituto},
+    experience={t.experience.experience},
+    its={t.experience.its},  
+    titulo1={t.experience.titulo1},
+    python={t.experience.python},
+    titulo2={t.experience.titulo2},
+    javascript={t.experience.javascript},
+    titulo3={t.experience.titulo3},
+    docker={t.experience.docker},
+    titulo4={t.experience.titulo4},
+  />
 </Layout>
