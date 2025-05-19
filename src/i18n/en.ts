@@ -18,10 +18,10 @@ export default {
 
   experience:{
     experience: "Academic Experience",
-    instituto:"Instituto de educación superior",
-    its: "Creation of a web page with backend and frontend for a dog hotel. Frontend created with HTML5 and CSS. Backend created in Bash script and connection to a MySQL database.",
+    instituto:"Higher Technological Institute",
+    its: "Web for dog hotel: HTML5/CSS frontend, Bash backend, MySQL.",
     titulo1: "System support",
-    python: "Creation of several desktop applications with Python and TKinter, and creation of web applications in Flask",
+    python: "Creating Python TKinter desktop apps and web apps with Flask.",
     titulo2: "Python flask programmer",
     javascript: "Creation of fullstack web applications with react and node",
     titulo3: "Javascript programmer with node",
