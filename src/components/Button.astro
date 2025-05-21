@@ -1,0 +1,24 @@
+---
+const certificado = {
+  PYTHON:{
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-1aff4b92-a848-479c-a242-7d62f0e60ab0.pdf"
+  },
+  JAVASCRIPT:{
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-d2da7f5d-d789-4a28-9c8f-83af6dbceb7e.pdf"
+  },
+  DOCKER:{
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-a9666240-6277-4acd-868b-59d07d414a9f.pdf"
+  },
+}
+import Download from "./icons/Download.astro"
+---
+{
+certificado.map((items) => ( 
+<a href={items.url}
+  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+<Download/>
+  Certificado
+</a> 
+  ))
+}
+
