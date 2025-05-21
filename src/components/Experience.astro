@@ -1,6 +1,7 @@
 ---
 import Books from "./icons/Books.astro"
-import Button from "./Button.astro"
+import Download from "./icons/Download.astro"
+
 const {its, titulo1, python, titulo2, javascript, titulo3, docker, titulo4, institute, experience} = Astro.props;
 
 const exp = [
@@ -15,18 +16,21 @@ const exp = [
     title: titulo2,
     description: python,
     year:"2021-2022",
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-1aff4b92-a848-479c-a242-7d62f0e60ab0.pdf",
   },
   {
     institue: "Udemy",
     title: titulo3,
     description: javascript,
     year:"2022-2023",
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-d2da7f5d-d789-4a28-9c8f-83af6dbceb7e.pdf",
   },
   {
     institue: "Udemy",
     title: docker,
     description: titulo4,
     year:"2023-2024",
+    url:"https://udemy-certificate.s3.amazonaws.com/pdf/UC-a9666240-6277-4acd-868b-59d07d414a9f.pdf"
   }, 
 ];
 ---
@@ -36,21 +40,28 @@ const exp = [
 </p>
   
 <div class="relative mx-12 pb-2 flex before:left-[32px] before:abslute before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4 px-26]">
-  <div class="relative mb-12 md:col-span-2 pr-40 mr-30"> 
-<div class="sticky top-0">
- { 
+  <div class="relative mb-12 md:col-span-2 pr-40 mr-30">
+      {
       exp.map ((items) => (
-      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-    <div class="ml-12 ">
-      <time class="flex p-0 m-0 text-sm text-gray-600/80 daark:text-white/80">{items.year}</time>
+      <div class="flex flex-col w-fit"></div>
+        <div class="flex h-[18px] w-[18px] rounded-full border border-zinc-400 bg-background dark:bg-muted z-10"></div>
+        <div class="w-px grow bg-gradient-to-b from-zinc-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"></div> 
+      <div class="ml-12">
+        <div class="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border border-white dark:bg-card/10 dark:border-white shadow-sm">
+      <time class="flex p-0 m-0 text-sm text-zinc-200/80 daark:text-white/80">{items.year}</time>
       <h3 class="font-semibold text-yellow-400 text-xl">{items.title}, {items.institue}</h3>
-        <p class="text-white">{items.description}</p>
-      <Button/>
-    </div>
+        <p class="text-white py-3">{items.description}</p>
+        <a class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 
+          bg-white rounded-full" 
+          href={items.url}>
+          <Download/>
+          Certificado
+  </a>
+        </div>
+        </div>
    ))
       }
-</div>
-  </div>  
+      </div>  
   </div>
 
 
